@@ -1,3 +1,4 @@
+/* eslint-disable no-useless-constructor */
 import React, { Component } from "react";
 
 class Personal extends Component{
@@ -5,9 +6,10 @@ class Personal extends Component{
         super()
     }
     render(){
+
         return (
             <fieldset>
-                <label htmlFor="first-name">First Name</label>
+                <label htmlFor="first-name"></label>
                 <input type='text' id="first-name"></input>
             </fieldset>
         )
