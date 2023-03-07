@@ -1,5 +1,6 @@
 import React ,{ Component } from "react";
 import { emptyState } from "./utils/emptyState";
+import { CvForm } from "./cvForm/mainForm";
 class Main extends Component{
     constructor(){
         super()
@@ -10,7 +11,9 @@ class Main extends Component{
 
     render(){
         return(
-            <div>{this.state.personal.name}</div>
+            <div>
+                <CvForm/>
+            </div>
         )
     }
 }
