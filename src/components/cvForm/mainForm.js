@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { Personal } from "./personal";
-
+import '../../styles/form.css'
 class CvForm extends Component{
     // eslint-disable-next-line no-useless-constructor
     constructor(props){
@@ -11,9 +11,9 @@ class CvForm extends Component{
         const {onNameChange}  = this.props
         
         return(
-            <div>
+            <form className="form">
                 <Personal nameChange={onNameChange}/>
-            </div>
+            </form>
         )
     }
 }

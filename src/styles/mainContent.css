@@ -1,0 +1,7 @@
+.main-content{
+    display: flex;
+    border: 1px solid black;
+    padding:5px;
+    gap: 20px;
+    
+}

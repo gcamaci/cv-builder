@@ -1,4 +1,5 @@
 import React ,{ Component } from "react";
+import '../styles/mainContent.css'
 import { emptyState } from "./utils/emptyState";
 import { CvForm } from "./cvForm/mainForm";
 import { Preview } from "./preview/mainPreview";
@@ -24,10 +25,10 @@ class Main extends Component{
     render(){
         
         return (
-            <div>
+            <main className="main-content">
                 <CvForm onNameChange={this.onNameChange}/>
                 <Preview cvInfo={this.state}/>
-            </div>
+            </main>
         )
     }
 }

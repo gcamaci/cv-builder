@@ -9,7 +9,6 @@ class PersonalSection extends Component{
         const {personalInfo} = this.props
         const { 
             name,
-            last,
             title,
             address,
             phone,
@@ -21,7 +20,6 @@ class PersonalSection extends Component{
                 <ul>
                     {console.log(name)}
                     <li>{name}</li>
-                    <li>{last}</li>
                     <li>{title}</li>
                     <li>{address}</li>
                     <li>{phone}</li>
