@@ -12,13 +12,13 @@ class Main extends Component{
 
     render(){
         
-        return(
+        return (
             <div>
                 <CvForm/>
-                <Preview state={this.state}/>
+                <Preview cvInfo={this.state}/>
             </div>
         )
     }
 }
 
-export {Main}
+export { Main }

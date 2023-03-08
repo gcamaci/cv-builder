@@ -3,14 +3,17 @@ import { PersonalSection } from "./personalPv";
 class Preview extends Component{
     constructor(props){
         super(props)
-
+         
     }
 
     render(){
-        const { personal } = this.props
+        const {cvInfo} = this.props
+        const {personal} = cvInfo
         return (
             <div className="resume-container">
                 <PersonalSection personalInfo={personal}/>
+                
+                
             </div>
         )
     }
