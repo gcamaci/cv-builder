@@ -7,14 +7,25 @@ class Main extends Component{
         super()
 
         this.state = emptyState
+        this.onNameChange = this.onNameChange.bind(this)
     }
 
-
+    onNameChange(e){
+        //spreads the name and value of target
+        const { name, value } = e.target
+        this.setState({
+            personal: {
+                //spread personal object to only select and update value of specific property
+                ...this.state.personal,
+                [name]:value,
+            },
+        })
+    }
     render(){
         
         return (
             <div>
-                <CvForm/>
+                <CvForm onNameChange={this.onNameChange}/>
                 <Preview cvInfo={this.state}/>
             </div>
         )

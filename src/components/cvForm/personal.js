@@ -2,15 +2,16 @@
 import React, { Component } from "react";
 
 class Personal extends Component{
-    constructor(){
-        super()
+    constructor(props){
+        super(props)
+        
     }
     render(){
-
+        const {nameChange} = this.props
         return (
             <fieldset>
                 <label htmlFor="first-name"></label>
-                <input type='text' id="first-name"></input>
+                <input onChange={nameChange} type='text' id="first-name" name='name'></input>
             </fieldset>
         )
     }
