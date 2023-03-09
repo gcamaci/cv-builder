@@ -9,7 +9,7 @@ class Personal extends Component{
     render(){
         const {nameChange} = this.props
         return (
-            <fieldset>
+            <div>
                 <label htmlFor="first-name">Name</label>
                 <input onChange={nameChange} type='text' id="first-name" name='name'></input>
 
@@ -29,7 +29,7 @@ class Personal extends Component{
                 <input onChange={nameChange} type='text' id="summary" name='description'></input>
                
                 
-            </fieldset>
+            </div>
         )
     }
 }

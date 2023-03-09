@@ -1,6 +1,6 @@
 const emptyState = {
     personal:{
-        name:'Giuseppe',
+        name:'Giuseppe Camaci',
         title:'Mapping',
         address:'2510 N 74th Ave',
         phone:'7732204536',
