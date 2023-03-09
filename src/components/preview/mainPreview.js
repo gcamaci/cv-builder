@@ -1,5 +1,6 @@
 import React, {Component} from "react";
 import { PersonalSection } from "./personalPv";
+import '../../styles/mainPreview.css'
 class Preview extends Component{
     constructor(props){
         super(props)

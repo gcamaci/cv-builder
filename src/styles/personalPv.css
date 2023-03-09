@@ -1,4 +1,16 @@
-.personal-selection{
+
+.resume-header{
+    display:flex;
+    flex-direction: column;
+    
+}
+.personal-section{
     display: flex;
     justify-content: space-between;
+    padding: 5px;
+    border: 1px solid red;
+}
+.header{
+    width: 100%;
+
 }

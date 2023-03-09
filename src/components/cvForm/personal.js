@@ -1,6 +1,6 @@
 /* eslint-disable no-useless-constructor */
 import React, { Component } from "react";
-
+import '../../styles/personalForm.css'
 class Personal extends Component{
     constructor(props){
         super(props)
@@ -9,7 +9,7 @@ class Personal extends Component{
     render(){
         const {nameChange} = this.props
         return (
-            <div>
+            <div className="personal-field">
                 <label htmlFor="first-name">Name</label>
                 <input onChange={nameChange} type='text' id="first-name" name='name'></input>
 

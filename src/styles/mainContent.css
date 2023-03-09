@@ -1,7 +1,7 @@
 .main-content{
     display: flex;
     border: 1px solid black;
-    padding:5px;
+    padding:20px;
     gap: 20px;
     
 }

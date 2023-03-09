@@ -1,4 +1,6 @@
 .form{
     border: 1px solid black;
     width:40vw;
+    padding: 10px;
+    gap: 10px;
 }
