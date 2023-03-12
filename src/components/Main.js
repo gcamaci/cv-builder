@@ -11,6 +11,9 @@ class Main extends Component{
         this.onNameChange = this.onNameChange.bind(this)
     }
 
+    setEducation(e){
+
+    }
     onNameChange(e){
         //spreads the name and value of target
         const { name, value } = e.target
