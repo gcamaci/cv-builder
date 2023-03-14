@@ -11,7 +11,8 @@ const emptyState = {
     educationTemplate: {
         name:'',
         degree:'',
-        gradYear:'',
+        startYear:'',
+        endYear:'',
         description:'',
     },
     experienceList:[],
