@@ -9,11 +9,20 @@ class Main extends Component{
 
         this.state = emptyState
         this.onNameChange = this.onNameChange.bind(this)
+        this.setEducation = this.setEducation.bind(this)
     }
 
-    setEducation(e){
-
-    }
+    setEducation(index, eduInfo) {
+        this.setState(prevState => ({
+          educationList: prevState.educationList.map((education, i) => {
+            if (i === index) {
+              return eduInfo;
+            } else {
+              return education;
+            }
+          })
+        }));
+      }
     onNameChange(e){
         //spreads the name and value of target
         const { name, value } = e.target
@@ -29,7 +38,11 @@ class Main extends Component{
         
         return (
             <main className="main-content">
-                <CvForm onNameChange={this.onNameChange}/>
+                <CvForm
+                 onNameChange={this.onNameChange}
+                 onEduChange={this.setEducation}
+
+                />
                 <Preview cvInfo={this.state}/>
             </main>
         )

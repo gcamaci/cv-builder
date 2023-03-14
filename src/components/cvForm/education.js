@@ -11,7 +11,13 @@ class Education extends Component{
         this.addEducationForm = this.addEducationForm.bind(this)
     }
     addEducationForm(){
-        const forms = [this.state.forms,<EducationForm key={this.state.forms.length}/>]
+        const forms = [
+            ...this.state.forms, 
+            <EducationForm 
+            key={this.state.forms.length} 
+            id={this.state.forms.length} 
+            />
+        ]
         this.setState({
             forms
         });
