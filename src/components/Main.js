@@ -12,7 +12,7 @@ class Main extends Component{
         this.setEducation = this.setEducation.bind(this)
         this.addEducation = this.addEducation.bind(this)
     }
-
+    
     setEducation(index, eduInfo) {
         this.setState(prevState => ({
           educationList: prevState.educationList.map((education, i) => {
@@ -24,6 +24,7 @@ class Main extends Component{
           })
         }));        
       }
+      
 
     addEducation(edu){
       this.setState({

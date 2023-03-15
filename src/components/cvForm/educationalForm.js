@@ -25,10 +25,10 @@ class EducationForm extends Component{
         
     }
 
-    changeEducation(e){
+    async changeEducation(e){
         const {id,eduChange} = this.props
-        this.setEduState(e)
-        //console.log(this.state)
+        await this.setEduState(e)
+        //says await is unecessary but it works?
         eduChange(id,this.state)
         
     }
