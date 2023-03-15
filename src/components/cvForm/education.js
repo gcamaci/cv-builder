@@ -17,6 +17,7 @@ class Education extends Component{
             key={this.state.forms.length} 
             id={this.state.forms.length} 
             eduChange={this.props.eduChange}
+            eduAdd={this.props.eduAdd}
             />
         ]
         this.setState({

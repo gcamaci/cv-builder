@@ -10,6 +10,7 @@ class Main extends Component{
         this.state = emptyState
         this.onNameChange = this.onNameChange.bind(this)
         this.setEducation = this.setEducation.bind(this)
+        this.addEducation = this.addEducation.bind(this)
     }
 
     setEducation(index, eduInfo) {
@@ -21,11 +22,15 @@ class Main extends Component{
               return education;
             }
           })
-        }));
-
-        
-        
+        }));        
       }
+
+    addEducation(edu){
+      this.setState({
+        educationList: this.state.educationList.concat(edu),
+      })
+
+    }
     onNameChange(e){
         //spreads the name and value of target
         const { name, value } = e.target
@@ -44,6 +49,7 @@ class Main extends Component{
                 <CvForm
                  onNameChange={this.onNameChange}
                  onEduChange={this.setEducation}
+                 onEduAdd={this.addEducation}
 
                 />
                 <Preview cvInfo={this.state}/>

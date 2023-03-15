@@ -33,9 +33,8 @@ class EducationForm extends Component{
         
     }
     submitEdu(){
-        const {id,eduChange} = this.props
-        console.log(this.state)
-        eduChange(id,this.state)
+        const {id,eduChange,eduAdd} = this.props
+        eduAdd(this.state)
     }
 
     

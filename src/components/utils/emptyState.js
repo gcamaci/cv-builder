@@ -8,13 +8,6 @@ const emptyState = {
         description:'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reiciendis in debitis porro libero provident. Repudiandae ullam quod tempore, velit delectus debitis. Alias, saepe. Itaque obcaecati libero rem esse? Eos at error odio aut modi ullam. Debitis beatae inventore fugit quae excepturi saepe, temporibus cumque tempora ducimus ipsam non, quaerat ad?',
     },
     educationList: [],
-    educationTemplate: {
-        name:'',
-        degree:'',
-        startYear:'',
-        endYear:'',
-        description:'',
-    },
     experienceList:[],
     experienceTemplate:{
         comany:'',
