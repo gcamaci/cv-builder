@@ -12,20 +12,36 @@ class EducationForm extends Component{
         }
 
         this.changeEducation = this.changeEducation.bind(this)
+        this.submitEdu = this.submitEdu.bind(this)
     }
 
-
-    changeEducation(e){
+    setEduState(e){
         const { name, value } = e.target
         this.setState({
        //spread personal object to only select and update value of specific property
             ...this.state,
             [name]:value,
         })
-        console.log(this.state)
+        
     }
+
+    changeEducation(e){
+        const {id,eduChange} = this.props
+        this.setEduState(e)
+        //console.log(this.state)
+        eduChange(id,this.state)
+        
+    }
+    submitEdu(){
+        const {id,eduChange} = this.props
+        console.log(this.state)
+        eduChange(id,this.state)
+    }
+
+    
     render(){
-        const {id} = this.props
+        const {id,eduChange} = this.props
+        
         return(
             <div>
                 <label>School</label>
@@ -43,7 +59,7 @@ class EducationForm extends Component{
                 <label>Description</label>
                 <input onChange={this.changeEducation} type='text' name='description'></input>
 
-                <button onClick={()=>console.log(id)} id={id} type="button">Add</button>
+                <button onClick={this.submitEdu} id={id} type="button">Add</button>
             </div>
         )
     }

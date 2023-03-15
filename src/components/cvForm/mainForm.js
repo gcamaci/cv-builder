@@ -9,12 +9,12 @@ class CvForm extends Component{
         
     }
     render(){
-        const {onNameChange}  = this.props
+        const {onNameChange, onEduChange}  = this.props
         
         return(
             <form className="form">
                 <Personal nameChange={onNameChange}/>
-                <Education/>
+                <Education eduChange={onEduChange}/>
             </form>
         )
     }

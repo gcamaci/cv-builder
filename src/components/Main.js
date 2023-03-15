@@ -22,6 +22,9 @@ class Main extends Component{
             }
           })
         }));
+
+        
+        
       }
     onNameChange(e){
         //spreads the name and value of target

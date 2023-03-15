@@ -16,11 +16,13 @@ class Education extends Component{
             <EducationForm 
             key={this.state.forms.length} 
             id={this.state.forms.length} 
+            eduChange={this.props.eduChange}
             />
         ]
         this.setState({
             forms
         });
+        
     }
 
    
