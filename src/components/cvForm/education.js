@@ -1,5 +1,4 @@
 import React, {Component} from "react";
-import { EducationForm } from "./educationalForm";
 class Education extends Component{
     constructor(props){
         super(props)
@@ -11,14 +10,16 @@ class Education extends Component{
         this.addEducationForm = this.addEducationForm.bind(this)
     }
     addEducationForm(){
+        const {eduChange,eduAdd,SectionForm} = this.props
         const forms = [
             ...this.state.forms, 
-            <EducationForm 
+            <SectionForm 
             key={this.state.forms.length} 
             id={this.state.forms.length} 
-            eduChange={this.props.eduChange}
-            eduAdd={this.props.eduAdd}
+            eduChange={eduChange}
+            eduAdd={eduAdd}
             />
+
         ]
         this.setState({
             forms
