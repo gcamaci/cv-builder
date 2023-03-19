@@ -25,6 +25,24 @@ class Main extends Component{
         }));        
       }
       
+    setExperience(index,expInfo){
+      this.setState(prevState => ({
+        experienceList: prevState.experienceList.map((experience, i) => {
+          if (i === index) {
+            return expInfo;
+          } else {
+            return experience;
+          }
+        })
+      })); 
+    }
+
+    addExperience(experience){
+      this.setState({
+        experienceList: this.state.experienceList.concat(experience),
+      })
+
+    }
 
     addEducation(edu){
       this.setState({

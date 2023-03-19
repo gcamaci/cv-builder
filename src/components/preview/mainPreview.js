@@ -16,6 +16,7 @@ class Preview extends Component{
                 <PersonalSection personalInfo={personal}/>
                 <EducationSection educationInfo={educationList}/>
                 
+                
             </div>
         )
     }

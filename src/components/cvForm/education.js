@@ -1,5 +1,5 @@
 import React, {Component} from "react";
-class Education extends Component{
+class Section extends Component{
     constructor(props){
         super(props)
 
@@ -7,9 +7,9 @@ class Education extends Component{
             forms:[]
         }
 
-        this.addEducationForm = this.addEducationForm.bind(this)
+        this.addSectionForm = this.addSectionForm.bind(this)
     }
-    addEducationForm(){
+    addSectionForm(){
         const {eduChange,eduAdd,SectionForm} = this.props
         const forms = [
             ...this.state.forms, 
@@ -32,12 +32,12 @@ class Education extends Component{
         return(
             <div>
                 <h1>Education</h1>
-                <button onClick={this.addEducationForm} type="button">+</button>
+                <button onClick={this.addSectionForm} type="button">+</button>
                 {this.state.forms}
             </div>
         )
     }
 }
 
-export {Education}
+export {Section}
 
