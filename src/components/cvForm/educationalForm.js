@@ -5,7 +5,7 @@ class EducationForm extends Component{
 
         this.state = {
             name:'',
-            degree:'',
+            title:'',
             startYear:'',
             endYear:'',
             description:''
@@ -47,7 +47,7 @@ class EducationForm extends Component{
                 <input onChange={this.changeEducation} type='text' name='name'></input>
 
                 <label>Degree</label>
-                <input onChange={this.changeEducation} type='text' name='degree'></input>
+                <input onChange={this.changeEducation} type='text' name='title'></input>
 
                 <label>Start</label>
                 <input onChange={this.changeEducation} type='text' name="startYear"></input>
