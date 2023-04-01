@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import '../../styles/form.css'
 import { Personal } from "./personal";
-import { Section } from "./education";
+import { Section } from "./section";
 import { EducationForm } from "./educationalForm";
 
 

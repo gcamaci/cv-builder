@@ -9,6 +9,7 @@ class Section extends Component{
 
         this.addSectionForm = this.addSectionForm.bind(this)
     }
+    
     addSectionForm(){
         const {eduChange,eduAdd,SectionForm} = this.props
         const forms = [

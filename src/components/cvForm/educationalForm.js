@@ -2,7 +2,6 @@ import React, {Component} from "react";
 class EducationForm extends Component{
     constructor(props){
         super(props)
-
         this.state = {
             name:'',
             title:'',
@@ -10,7 +9,7 @@ class EducationForm extends Component{
             endYear:'',
             description:''
         }
-
+        
         this.changeEducation = this.changeEducation.bind(this)
         this.submitEdu = this.submitEdu.bind(this)
     }
