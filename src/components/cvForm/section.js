@@ -8,8 +8,24 @@ class Section extends Component{
         }
 
         this.addSectionForm = this.addSectionForm.bind(this)
+        this.generateLabels = this.generateLabels.bind(this)
     }
-    
+    generateLabels(category){
+        if(category !== 'Education') {
+            return {
+                name: "Company",
+                title: 'Title',
+                category: "Experience"
+            }
+        }else{
+            return {
+                name: "School",
+                title: "Degree",
+                category: "Education"
+            }
+        }
+
+    }
     addSectionForm(){
         const {eduChange,eduAdd,SectionForm} = this.props
         const forms = [
@@ -19,8 +35,9 @@ class Section extends Component{
             id={this.state.forms.length} 
             eduChange={eduChange}
             eduAdd={eduAdd}
+            labels={this.generateLabels('Education')}
             />
-
+            
         ]
         this.setState({
             forms

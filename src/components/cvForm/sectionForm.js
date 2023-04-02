@@ -3,11 +3,11 @@ class sectionForm extends Component{
     constructor(props){
         super(props)
         this.state = {
-            name: '',
-            title: '',
-            startYear: '',
-            endYear: '',
-            description: ''
+            name:'',
+            title:'',
+            startYear:'',
+            endYear:'',
+            description:''
         }
     }
 }

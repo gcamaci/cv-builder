@@ -11,6 +11,7 @@ class CvForm extends Component{
         super(props)
         
     }
+
     render(){
         const { 
             onNameChange, 
@@ -26,6 +27,7 @@ class CvForm extends Component{
                  eduAdd={onEduAdd}
                  SectionForm = {EducationForm}
                 />
+                
             </form>
         )
     }

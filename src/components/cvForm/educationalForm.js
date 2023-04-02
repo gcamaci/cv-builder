@@ -9,12 +9,12 @@ class EducationForm extends Component{
             endYear:'',
             description:''
         }
-        
-        this.changeEducation = this.changeEducation.bind(this)
-        this.submitEdu = this.submitEdu.bind(this)
+
+        this.changeFormState = this.changeFormState.bind(this)
+        this.submitState = this.submitState.bind(this)
     }
 
-    setEduState(e){
+    setFormState(e){
         const { name, value } = e.target
         this.setState({
        //spread personal object to only select and update value of specific property
@@ -24,40 +24,42 @@ class EducationForm extends Component{
         
     }
 
-    async changeEducation(e){
+    async changeFormState(e){
         const {id,eduChange} = this.props
-        await this.setEduState(e)
+        await this.setFormState(e)
         //says await is unecessary but it works?
         eduChange(id,this.state)
         
     }
-    submitEdu(){
-        const {id,eduChange,eduAdd} = this.props
+    submitState(){
+        const {eduAdd} = this.props
         eduAdd(this.state)
     }
 
     
     render(){
-        const {id,eduChange} = this.props
+        console.log(this.props)
+        const {id,labels} = this.props
+        
         
         return(
             <div>
-                <label>School</label>
-                <input onChange={this.changeEducation} type='text' name='name'></input>
+                <label>{labels.name}</label>
+                <input onChange={this.changeFormState} type='text' name='name'></input>
 
-                <label>Degree</label>
-                <input onChange={this.changeEducation} type='text' name='title'></input>
+                <label>{labels.title}</label>
+                <input onChange={this.changeFormState} type='text' name='title'></input>
 
                 <label>Start</label>
-                <input onChange={this.changeEducation} type='text' name="startYear"></input>
+                <input onChange={this.changeFormState} type='text' name="startYear"></input>
 
                 <label>End</label>
-                <input onChange={this.changeEducation} type='text' name="endYear"></input>
+                <input onChange={this.changeFormState} type='text' name="endYear"></input>
 
                 <label>Description</label>
-                <input onChange={this.changeEducation} type='text' name='description'></input>
+                <input onChange={this.changeFormState} type='text' name='description'></input>
 
-                <button onClick={this.submitEdu} id={id} type="button">Add</button>
+                <button onClick={this.submitState} id={id} type="button">Add</button>
             </div>
         )
     }
