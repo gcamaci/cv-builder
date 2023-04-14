@@ -1,16 +1,10 @@
-import React, {Component} from "react";
-class Section extends Component{
-    constructor(props){
-        super(props)
+import React, {useState} from "react";
 
-        this.state ={
-            forms:[]
-        }
 
-        this.addSectionForm = this.addSectionForm.bind(this)
-        this.generateLabels = this.generateLabels.bind(this)
-    }
-    generateLabels(category){
+const Section = ({ eduChange, eduAdd, SectionForm}) => {
+    const [forms, setForms] = useState([]);
+
+    const generateLabels = (category) => {
         if(category !== 'Education') {
             return {
                 name: "Company",
@@ -26,35 +20,29 @@ class Section extends Component{
         }
 
     }
-    addSectionForm(){
-        const {eduChange,eduAdd,SectionForm} = this.props
-        const forms = [
-            ...this.state.forms, 
+
+    const addSectionForm = () => {
+        const labels = generateLabels('Education');
+        const newForm = ( 
             <SectionForm 
-            key={this.state.forms.length} 
-            id={this.state.forms.length} 
+            key={forms.length}
+            id={forms.length}
             eduChange={eduChange}
             eduAdd={eduAdd}
-            labels={this.generateLabels('Education')}
+            labels={labels}
             />
-            
-        ]
-        this.setState({
-            forms
-        });
-        
-    }
-
-   
-    render(){
-        return(
-            <div>
-                <h1>Education</h1>
-                <button onClick={this.addSectionForm} type="button">+</button>
-                {this.state.forms}
-            </div>
         )
-    }
+        setForms((prevForms) => [...prevForms, newForm])
+    };
+
+    return (
+        <div>
+            <h1>Education</h1>
+            <button onClick={addSectionForm} type="button">+</button>
+            {forms}
+        </div>
+        
+    );
 }
 
 export {Section}
