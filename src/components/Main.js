@@ -1,8 +1,62 @@
-import React ,{ Component } from "react";
+import React ,{ useState, Component } from "react";
 import '../styles/mainContent.css'
 import { emptyState } from "./utils/emptyState";
 import { CvForm } from "./cvForm/mainForm";
 import { Preview } from "./preview/mainPreview";
+
+
+const Main = () => {
+  const [state, setState] = useState(emptyState);
+  
+  const personalInfoChange = (e) => {
+    const { name, value}  = e.target
+    setState((prevState) => ({
+      ...prevState,
+      personal: {
+        ...prevState.personal,
+        [name]:value,
+      },
+    }));
+  };
+
+  const updateEducation = (index, eduInfo) => {
+    setState((prevState) => ({
+      ...prevState,
+      educationList:prevState.educationList.map((education,i) => {
+        return i === index ? eduInfo : education; 
+      })
+
+    }))
+  }
+
+  const changeExperience = (e) => {
+    
+  }
+
+  const addEducation = (edu) => {
+    setState((prevState) => ({
+      ...prevState,
+      educationList: prevState.educationList.concat(edu)
+
+    }));
+  }
+  return (
+    <main className="main-content">
+      <CvForm
+      genInfoChange={personalInfoChange}
+      historyUpdate={updateEducation}
+      historyAdd={addEducation}
+      />
+      <Preview cvInfo={state}/>
+    </main>
+    
+  )
+}
+
+
+
+
+/*
 class Main extends Component{
     constructor(){
         super()
@@ -76,5 +130,6 @@ class Main extends Component{
         )
     }
 }
+*/
 
 export { Main }

@@ -1,7 +1,7 @@
 import React, {useState} from "react";
 
 
-const Section = ({ eduChange, eduAdd, Form}) => {
+const Section = ({updateForm, addFormInfo, Form}) => {
     const [forms, setForms] = useState([]);
 
     const generateLabels = (category) => {
@@ -27,8 +27,8 @@ const Section = ({ eduChange, eduAdd, Form}) => {
             <Form 
             key={forms.length}
             id={forms.length}
-            eduChange={eduChange}
-            eduAdd={eduAdd}
+            formChange={updateForm}
+            addForm={addFormInfo}
             labels={labels}
             />
         )

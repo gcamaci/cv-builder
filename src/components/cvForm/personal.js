@@ -1,5 +1,5 @@
 /* eslint-disable no-useless-constructor */
-import React, { useState } from "react";
+import React from "react";
 import '../../styles/personalForm.css'
 
 const Personal = ({nameChange}) => { 
