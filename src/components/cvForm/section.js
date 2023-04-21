@@ -1,9 +1,9 @@
 import React, {useState} from "react";
 
 
-const Section = ({updateForm, addFormInfo, Form}) => {
+const Section = ({title, updateForm, addFormInfo, Form}) => {
     const [forms, setForms] = useState([]);
-
+    
     const generateLabels = (category) => {
         if(category !== 'Education') {
             return {
@@ -20,9 +20,8 @@ const Section = ({updateForm, addFormInfo, Form}) => {
         }
 
     }
-
+    const labels = generateLabels(title);
     const addSectionForm = () => {
-        const labels = generateLabels('Education');
         const newForm = ( 
             <Form 
             key={forms.length}
@@ -37,7 +36,7 @@ const Section = ({updateForm, addFormInfo, Form}) => {
 
     return (
         <div>
-            <h1>Education</h1>
+            <h1>{labels.category}</h1>
             <button onClick={addSectionForm} type="button">+</button>
             {forms}
         </div>

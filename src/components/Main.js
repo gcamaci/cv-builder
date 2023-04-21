@@ -29,8 +29,14 @@ const Main = () => {
     }))
   }
 
-  const changeExperience = (e) => {
-    
+  const updateExperience = (index, expInfo) => {
+    setState((prevState) => ({
+      ...prevState,
+      experienceList:prevState.experienceList.map((experience,i) => {
+        return i === index ? expInfo : experience; 
+      })
+
+    }))
   }
 
   const addEducation = (edu) => {
@@ -40,12 +46,22 @@ const Main = () => {
 
     }));
   }
+
+  const addExperience = (experience) => {
+    setState((prevState) => ({
+      ...prevState,
+      experienceList: prevState.experienceList.concat(experience)
+
+    }));
+  }
   return (
     <main className="main-content">
       <CvForm
       genInfoChange={personalInfoChange}
-      historyUpdate={updateEducation}
-      historyAdd={addEducation}
+      updateEdu={updateEducation}
+      addEdu={addEducation}
+      updateExp={updateExperience}
+      addExp={addExperience}
       />
       <Preview cvInfo={state}/>
     </main>

@@ -4,11 +4,20 @@ import { Personal } from "./personal";
 import { Section } from "./section";
 import { SectionForm } from "./educationalForm";
 
-const CvForm = ({ genInfoChange, updateHistory,addHistory}) => {
+const CvForm = ({ 
+  genInfoChange, 
+  updateEdu, 
+  addEdu,
+  updateExp,
+  addExp
+
+  //adding other functions for now as props passed by main and entered to section
+}) => {
     return (
       <form className="form">
         <Personal nameChange={genInfoChange} />
-        <Section updateForm={updateHistory} addFormInfo={addHistory} Form={SectionForm} />
+        <Section title={"Education"} updateForm={updateEdu} addFormInfo={addEdu} Form={SectionForm} />
+        <Section title={"Experience"} updateForm={updateExp} addFormInfo={addExp} Form={SectionForm}/>
       </form>
     );
   };
