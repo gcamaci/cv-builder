@@ -1,25 +1,23 @@
-import React, {Component} from "react";
+import React from "react";
 import { PersonalSection } from "./personalPv";
-import { EducationSection } from "./educationPv";
+import { CredentialSection } from "./credentialDisplay";
 import '../../styles/mainPreview.css'
-class Preview extends Component{
-    constructor(props){
-        super(props)
-         
-    }
 
-    render(){
-        const {cvInfo} = this.props
-        const {personal,educationList} = cvInfo
-        return (
+
+const Preview = ({ cvInfo }) => {
+    const { personal,educationList,experienceList } = cvInfo
+    console.log(cvInfo)
+    return (
+        <div>
             <div className="resume-container">
                 <PersonalSection personalInfo={personal}/>
-                <EducationSection educationInfo={educationList}/>
-                
-                
+                <CredentialSection title="Education"sectionInfo={educationList}/>
+                <CredentialSection title="Experience"sectionInfo={experienceList}/>   
             </div>
-        )
-    }
+        </div>
+    )
+
 }
 
-export{Preview}
+
+export{ Preview }

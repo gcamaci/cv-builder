@@ -2,7 +2,7 @@ import React from "react";
 import '../../styles/form.css'
 import { Personal } from "./personal";
 import { Section } from "./section";
-import { SectionForm } from "./educationalForm";
+import { SectionForm } from "./credentialForm";
 
 const CvForm = ({ 
   genInfoChange, 

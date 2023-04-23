@@ -8,7 +8,7 @@
     display: flex;
     justify-content: space-between;
     padding: 5px;
-    border: 1px solid red;
+    background-color: rgb(223, 215, 215);
 }
 .header{
     width: 100%;
